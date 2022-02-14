@@ -37,6 +37,12 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 
 ## Numerical Summarys 
 
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
+
+According to the visual data, the fron seats has an average of 1.78 drinks per week, the back seats had an average of 8.55 drinks per week, and lastly the middle seats had an average of 3.33 drinks per week. It is evident that there is a substantial difference from the back seats compared to the middle and front seats. 
+
 ## Inferential Tests
 
 ## Conclusions
