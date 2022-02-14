@@ -64,4 +64,4 @@ After checking the results, the p value was 0.000116 which is significant. This 
 
 ## Conclusions
 
-
+In conclusion, the back row drank a lot more by a great amount than the front and the middle row. The middle row and the front row were not that different from eachother. 
