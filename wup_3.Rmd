@@ -41,9 +41,26 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 favstats(alcohol~Seat,data=ucdavis1)
 ```
 
-According to the visual data, the fron seats has an average of 1.78 drinks per week, the back seats had an average of 8.55 drinks per week, and lastly the middle seats had an average of 3.33 drinks per week. It is evident that there is a substantial difference from the back seats compared to the middle and front seats. 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+According to the visual data, the from seats has an average of 1.78 drinks per week, the back seats had an average of 8.55 drinks per week, and lastly the middle seats had an average of 3.33 drinks per week. It is evident that there is a substantial difference from the back seats compared to the middle and front seats. 
 
 ## Inferential Tests
+
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+After checking the results, the p value was 0.000116 which is significant. This means we need to do a follow up test. After doing the follow up test, we see that the back row is drinking a lot more than the front row and middle row. We see that the front and back row are different. The middle and back row are also different. However, the middle and the front row are not very different. 
 
 ## Conclusions
 
